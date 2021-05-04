@@ -4,13 +4,13 @@
 }
 
 .mr-auto {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 35px;
   padding: 4%;
 }
 
 .text-input {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   margin-left: 40px;
   padding: 1%;
 }
@@ -24,7 +24,7 @@
   background: transparent;
   border: 0;
   border-bottom: 1px solid;
-  padding: 1em 0 .8em;
+  padding: 1em 0 0.8em;
   text-align: center;
   font-size: 18px;
   margin-left: 50px;
@@ -74,7 +74,6 @@
 }
 
 .btn-sub:before, .btn-sub:after {
-  content: "";
   display: block;
   position: absolute;
   -webkit-transition: all 300ms ease;
@@ -100,6 +99,7 @@
   width: 50px;
   left: 0;
   top: 1.49em;
+  z-index: 1;
 }
 
 .btn-sub:hover .span-sub {
@@ -121,7 +121,7 @@
 .txt-software {
   margin-left: 57px;
   width: 550px;
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
 }
 
 .img-logo2 {
@@ -136,7 +136,7 @@
 }
 
 .about-title {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-align: center;
   margin-top: 20%;
   font-size: 24px;
@@ -148,11 +148,11 @@
   margin-left: 450px;
   margin-top: 15px;
   padding: 1%;
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
 }
 
 .project-title {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 29px;
   margin-top: 29px;
   margin-left: 20px;
@@ -170,7 +170,7 @@
 }
 
 .timenews {
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   margin-top: 20px;
   font-size: 20px;
   margin-left: 10px;
@@ -197,7 +197,7 @@
 }
 
 .ecommerce {
-  font-family: 'Ubuntu Condensed', sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   font-size: 20px;
   margin-top: 20px;
 }
@@ -244,7 +244,14 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-left: 45%;
+  margin-left: 42%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  -webkit-transition-delay: 10s;
+          transition-delay: 10s;
+  -webkit-transition-duration: 10%;
+          transition-duration: 10%;
+  opacity: 50%;
 }
 
 .footer-txt {
@@ -257,5 +264,86 @@
 .footer_img {
   width: 900px;
   margin-top: 250px;
+}
+
+.video {
+  position: absolute;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 135%;
+  left: 50%;
+  top: 60%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 680px) {
+  .image_tool {
+    display: none;
+  }
+  .about-paragh {
+    margin: 0%;
+    width: 100%;
+  }
+  .txt-software {
+    width: 95%;
+    margin-left: 10px;
+  }
+  .footer_img {
+    display: none;
+  }
+  .footer-txt {
+    position: relative;
+    float: left;
+    margin-top: 0%;
+    left: 10%;
+  }
+  .btn-sub {
+    margin-left: 70px;
+  }
+  .input-label {
+    width: 300px;
+    margin-left: 29px;
+  }
+  .btn-download {
+    margin-top: 20px;
+    margin-left: 55px;
+  }
+  .text_copyright {
+    display: none;
+  }
+  .short_descri_2 {
+    width: 300px;
+  }
+  .footer_title {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .footer_title1 {
+    margin-left: 20px;
+  }
+  .Avatar {
+    margin-left: 80px;
+  }
+  .video {
+    position: absolute;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 115%;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+  }
+  .copyright_title {
+    position: absolute;
+    top: 465%;
+    margin-bottom: 20px;
+    left: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

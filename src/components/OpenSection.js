@@ -7,7 +7,7 @@ const OpenSection = () => {
 
   firebase
     .firestore()
-    .collection("comments")
+    .collection("emails")
     .onSnapshot(
       (snapshot) => {
         setComments(snapshot.docs);
@@ -23,7 +23,6 @@ const OpenSection = () => {
       .value;
     const val2 = val;
     event.target.parentElement.parentElement.querySelector("input").value = "";
-    
 
     firebase
       .firestore()
@@ -37,6 +36,10 @@ const OpenSection = () => {
       })
       .catch((e) => console.trace(e));
   };
+  function handleChange(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
 
   return (
     <>
@@ -45,16 +48,7 @@ const OpenSection = () => {
           autoPlay
           loop
           muted
-          style={{
-            position: "absolute",
-            width: "100%",
-            objectFit: "cover",
-            transform: "translate(-50%, -50%)",
-            height: "135%",
-            left: "50%",
-            top: "60%",
-            zIndex: "-1",
-          }}
+          className="video"
         >
           <source src={topView} type="video/mp4" />
         </video>
@@ -82,26 +76,30 @@ const OpenSection = () => {
               placeholder="example@gmail.com"
               required
             />
+            {comments.map((c) => {
+              return  (
+                <div id="comment-holder">
+                  <p className="first-comment"> {c.data().Subscribed} </p>
+                </div>
+              );
+            })}
             <button
               type="submit"
               className="btn-sub"
               onClick={(event) => uploadComment(event)}
+              onChange={handleChange}
             >
               <span className="span-sub">Subscribe</span>
             </button>
-          <button className="btn-download"><a style={{color:"#fff"}} href="data/info.pdf" download>Downlond pdf</a></button>
+            <button className="btn-download">
+              <a style={{ color: "#fff" }} href="data/info.pdf" download>
+                Downlond pdf
+              </a>
+            </button>
           </form>
-        </div> 
+        </div>
         <br />
         <br />
-
-      {comments.map((c) => {
-        return (
-          <div id="comment-holder">
-            <p className="first-comment"> {c.data().commentBody} </p>
-          </div>
-        );
-      })}
       </main>
     </>
   );

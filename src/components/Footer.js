@@ -9,9 +9,9 @@ const Footer = (props) => {
         <h1 className="text-help">How can i help?</h1>
         {/* <p className="short_descri_1" >{props.text}</p> */}
         <div className="footer-txt"> 
-        <h3>{props.title}</h3>
+        <h3 className="footer_title">{props.title}</h3>
         <p className="short_descri_2" >{props.text}</p>
-        <h3>{props.title}</h3>
+        <h3 className="footer_title1">{props.title}</h3>
         <p className="short_descri_2" >{props.text}</p>
         </div>
       <img  className="footer_img" src="https://visme.co/blog/wp-content/themes/blog/img/lion.png" alt="" />

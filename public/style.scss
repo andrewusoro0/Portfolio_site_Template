@@ -1,27 +1,27 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-.mr-auto{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 35px;
-    padding: 4%;
+.mr-auto {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 35px;
+  padding: 4%;
 }
-.text-input{
-  font-family: 'Yanone Kaffeesatz', sans-serif;
- margin-left: 40px;
- padding: 1%;
+.text-input {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  margin-left: 40px;
+  padding: 1%;
 }
-.input-form{
+.input-form {
   margin-left: 50px;
 }
-.input-label{
+.input-label {
   width: 35%;
   background: transparent;
   border: 0;
   border-bottom: 1px solid;
-  padding: 1em 0 .8em;
+  padding: 1em 0 0.8em;
   text-align: center;
   font-size: 18px;
   margin-left: 50px;
@@ -30,204 +30,276 @@
   line-height: 1.5;
   color: inherit;
   outline: none;
-  &::placeholder { 
-      color: hsla(0, 0%, 100%, 0.5);
+  &::placeholder {
+    color: hsla(0, 0%, 100%, 0.5);
   }
-
 }
 
-.btn-sub{  
-    all: unset;
-    margin-top: 2.4em;
-    background: transparent;
-    border: 2px solid white;
-    padding: 1em 4em;
-    border-radius: 50px;
-    cursor: pointer;
+.btn-sub {
+  all: unset;
+  margin-top: 2.4em;
+  background: transparent;
+  border: 2px solid white;
+  padding: 1em 4em;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  position: relative;
+  transition: all 300ms ease;
+  .span-sub {
     display: inline-block;
-    font-weight: 700;
-    position: relative;
+    transition: all 200ms ease;
+    z-index: 2;
+  }
+  &:before,
+  &:after {
+    
+    display: block;
+    position: absolute;
     transition: all 300ms ease;
+    opacity: 0;
+  }
+  &:before {
+    height: 7px;
+    width: 7px;
+    background: transparent;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    right: 30px;
+    top: 21px;
+    transform: rotate(45deg);
+  }
+  &:after {
+    background: white;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    top: 1.49em;
+    z-index: 1;
+  }
+  &:hover {
     .span-sub {
-        display: inline-block;
-        transition: all 200ms ease;
-        z-index: 2;
-    }
-    &:before, &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        transition: all 300ms ease;
-        opacity: 0;
+      transform: translateX(-10px);
     }
     &:before {
-        height: 7px;
-        width: 7px;
-        background: transparent;
-        border-right: 2px solid;
-        border-top: 2px solid;
-        right: 30px; top: 21px;
-        transform: rotate(45deg);
+      opacity: 1;
     }
     &:after {
-        background: white;
-        height: 2px;
-        width: 50px;
-        left: 0;
-        top: 1.49em;
-        //z-index: 1;
+      width: 14px;
+      opacity: 1;
+      transform: translateX(160px);
     }
-    &:hover {
-        .span-sub {
-            transform: translateX(-10px);
-        }
-        &:before {
-            opacity: 1;
-        }
-        &:after {
-            width: 14px;
-            opacity: 1;
-            transform: translateX(160px);
-        }
-    }
+  }
 }
 
-.txt-software{
+.txt-software {
   margin-left: 57px;
   width: 550px;
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
 }
 
-.img-logo2{
+.img-logo2 {
   float: right;
   display: block;
 }
 
-.display_style{
-display: block;
-color: #fcfcfc;
-position: relative;
-
+.display_style {
+  display: block;
+  color: #fcfcfc;
+  position: relative;
 }
-.about-title{
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+.about-title {
+  font-family: "Yanone Kaffeesatz", sans-serif;
   text-align: center;
   margin-top: 20%;
   font-size: 24px;
 }
 
-.about-paragh{
+.about-paragh {
   width: 600px;
   text-align: center;
   margin-left: 450px;
   margin-top: 15px;
   padding: 1%;
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
 }
-.project-title{
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+.project-title {
+  font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 29px;
   margin-top: 29px;
   margin-left: 20px;
 }
-.frist-img{
+.frist-img {
   width: 600px;
   margin-left: 30px;
-  margin-top: 30px  ;
+  margin-top: 30px;
 }
 
-.project-description{
+.project-description {
   width: 510px;
   margin-left: 40px;
 }
 
-.timenews{
-  font-family: 'Ubuntu Condensed', sans-serif;
+.timenews {
+  font-family: "Ubuntu Condensed", sans-serif;
   margin-top: 20px;
   font-size: 20px;
   margin-left: 10px;
 }
 
-.cardDeck{
+.cardDeck {
   margin-bottom: 40px;
   margin-top: 20px;
-  
 }
-.bg{
- //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cuse fill='%23fafafa' href='%23s' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='2'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-background-attachment: fixed;
-    background-size: cover;
-    position: static;
-}
-
-.linkgithub{
-margin-left: 40px;
-font-size: 20px;
-text-decoration: none;
-margin-top: 25px;
-margin-bottom: 30px;
-color: #222;
+.bg {
+  //background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cuse fill='%23fafafa' href='%23s' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23f5f5f5' href='%23s'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='2'/%3E%3Cuse fill='%23f0f0f0' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ebebeb'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(50) translate(-980 -735)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E);
+  background-attachment: fixed;
+  background-size: cover;
+  position: static;
 }
 
-.ecommerce{
-  font-family: 'Ubuntu Condensed', sans-serif;
+.linkgithub {
+  margin-left: 40px;
+  font-size: 20px;
+  text-decoration: none;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.ecommerce {
+  font-family: "Ubuntu Condensed", sans-serif;
   font-size: 20px;
   margin-top: 20px;
 }
-.container-grid{
+.container-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: none;
 }
-.btn-download{
+.btn-download {
   all: unset;
-    margin-top: 3.4em;
-    margin-left: 10px;
-    background: transparent;
-    border: 2px solid white;
-    padding: 1em 4em;
-    border-radius: 50px;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 700;
-    position: relative;
-    transition: all 300ms ease;
-    color: #fff;
-    text-decoration: none;
-
+  margin-top: 3.4em;
+  margin-left: 10px;
+  background: transparent;
+  border: 2px solid white;
+  padding: 1em 4em;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  position: relative;
+  transition: all 300ms ease;
+  color: #fff;
+  text-decoration: none;
 }
 
-.text-help{
+.text-help {
   text-align: center;
   margin-top: 55px;
   transform: translateY(35%);
 }
-// .short_descri_1{
-//   width: 600px;
-//   margin-top: 55px;
-//   margin-left: 30px;
-//   float: right;
-//   position: relative;
-  
-// }
-.short_descri_2{
+
+.short_descri_2 {
   width: 450px;
-  
 }
-.Avatar{
+.Avatar {
   display: inline-flex;
-  margin-left: 45%;
-  
+  margin-left: 42%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition-delay: 10s;
+  transition-duration: 10%;
+  opacity: 50%;
 }
-.footer-txt{
+
+.footer-txt {
   float: right;
   position: absolute;
   margin-top: 100px;
   left: 65%;
-
 }
-.footer_img{
+.footer_img {
   width: 900px;
   margin-top: 250px;
- 
+}
+.video {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  height: 135%;
+  left: 50%;
+  top: 60%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 680px) {
+  .image_tool {
+    display: none;
+  }
+  .about-paragh {
+    margin: 0%;
+    width: 100%;
+  }
+  .txt-software {
+    width: 95%;
+    margin-left: 10px;
+  }
+  .footer_img {
+   display: none;
+  }
+
+  .footer-txt {
+    position: relative;
+    float: left;
+    margin-top: 0%;
+    left: 10%;
+    
+  }
+  .btn-sub {
+    margin-left: 70px;
+  }
+  .input-label {
+    width: 300px;
+    margin-left: 29px;
+  }
+  .btn-download {
+    margin-top: 20px;
+    margin-left: 55px;
+  }
+  .text_copyright {
+    display: none;
+  }
+  .short_descri_2 {
+    width: 300px;
+    
+  }
+  .footer_title{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .footer_title1{
+    margin-left: 20px;
+  }
+  .Avatar {
+    margin-left: 80px;
+  }
+  .video {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    height: 115%;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+  }
+  .copyright_title{
+     position: absolute;
+     top: 465%;
+     margin-bottom: 20px;
+     left: 60px;
+  }
 }
