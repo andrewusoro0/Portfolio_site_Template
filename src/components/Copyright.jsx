@@ -12,6 +12,7 @@ const year = currentDate.getFullYear();
 const Copyright = () => { 
     function click() {
      document.getElementById("txtId").innerHTML = text
+     
     }
     const text = "andrwusoro0@gmail.com"
   
@@ -28,13 +29,13 @@ const Copyright = () => {
           <div id="txtId" style={{textAlign:"center"}}></div>
         <div className="Avatar">
           <Avatar style={{margin:"10px", cursor:"pointer"}}> 
-            <TwitterIcon  onClick={() => window.open('https://twitter.com/AndrewWeb7', '_blank')} />
+            <TwitterIcon color="primary" onClick={() => window.open('https://twitter.com/AndrewWeb7', '_blank')}  />
           </Avatar> 
           <Avatar style={{margin:"10px", cursor:"pointer"}}>
-            <LinkedInIcon onClick={() => window.open('https://www.linkedin.com/in/andrew-usoro-a942351ab/', '_blank')} />
+            <LinkedInIcon color="primary" onClick={() => window.open('https://www.linkedin.com/in/andrew-usoro-a942351ab/', '_blank')} />
           </Avatar>
           <Avatar style={{margin:"10px", cursor:"pointer"}}>
-            <EmailIcon onClick={click} />
+            <EmailIcon color="secondary"onClick={click} />
           </Avatar>
         </div>
 

@@ -206,14 +206,16 @@
 }
 .Avatar {
   display: inline-flex;
-  margin-left: 42%;
+  margin-left: 43%;
   margin-top: 20px;
   margin-bottom: 10px;
   transition-delay: 10s;
   transition-duration: 10%;
   opacity: 50%;
 }
-
+#textID{
+  margin-left: 50px;
+}
 .footer-txt {
   float: right;
   position: absolute;
@@ -284,7 +286,7 @@
     margin-left: 20px;
   }
   .Avatar {
-    margin-left: 80px;
+    margin-left: 90px;
   }
   .video {
     position: absolute;
@@ -297,9 +299,6 @@
     z-index: -1;
   }
   .copyright_title{
-     position: absolute;
-     top: 465%;
-     margin-bottom: 20px;
-     left: 60px;
+     
   }
 }

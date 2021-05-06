@@ -32,24 +32,16 @@ const OpenSection = () => {
         timeStamp: Date.now(),
       })
       .then((r) => {
-        console.log(r);
+        const okay = "Your subcription was successful!";
+        document.getElementById("textID").innerHTML = okay;
       })
       .catch((e) => console.trace(e));
   };
-  function handleChange(e) {
-    e.preventDefault();
-    console.log('The link was clicked.');
-  }
 
   return (
     <>
       <main className="display_style">
-        <video
-          autoPlay
-          loop
-          muted
-          className="video"
-        >
+        <video autoPlay loop muted className="video">
           <source src={topView} type="video/mp4" />
         </video>
         <div className="mr-auto">
@@ -57,13 +49,9 @@ const OpenSection = () => {
         </div>
 
         <p className="txt-software">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
+          My portfolio is a representation of all
+          that I've learned and accomplished as a Software engineering.
+          
         </p>
         <div>
           <h2 className="text-input">Get Resume</h2>
@@ -77,7 +65,7 @@ const OpenSection = () => {
               required
             />
             {comments.map((c) => {
-              return  (
+              return (
                 <div id="comment-holder">
                   <p className="first-comment"> {c.data().Subscribed} </p>
                 </div>
@@ -87,7 +75,6 @@ const OpenSection = () => {
               type="submit"
               className="btn-sub"
               onClick={(event) => uploadComment(event)}
-              onChange={handleChange}
             >
               <span className="span-sub">Subscribe</span>
             </button>
@@ -96,6 +83,7 @@ const OpenSection = () => {
                 Downlond pdf
               </a>
             </button>
+            <div id="textID"></div>
           </form>
         </div>
         <br />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardDeck } from "react-bootstrap";
 
-const Projects = (props) => {
+const Projects = () => {
   return (
     <>
       <div className="project-title">
@@ -15,39 +15,106 @@ const Projects = (props) => {
           <Card>
             <Card.Img variant="top" src="images/1618592549214.png" />
             <Card.Body>
-              <Card.Title>{props.title}</Card.Title>
-              <Card.Text>{props.description}</Card.Text>
+              <Card.Title>World News</Card.Title>
+              <Card.Text>
+                This website was built to display latest and most popular news
+                and with React.js,Express.js and with the support of News API
+                using Express.js request GET to receive data from the Api and
+                render the website.
+              </Card.Text>
+              <Card.Text
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/andrewusoro0/News-Feed-API",
+                    "_blank"
+                  )
+                }
+              >
+                Source code
+              </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
-            </Card.Footer> 
+              <p
+                className="text-muted"
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open(
+                    "https://elegant-mayer-8afbdf.netlify.app/",
+                    "_blank"
+                  )
+                }
+              >
+                View website
+              </p>
+            </Card.Footer>
           </Card>
 
           <Card>
-            <Card.Img variant="top" src="images/1618593647233.png" />
+            <Card.Img variant="top" src="images/1618593331143.png" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Ecommerce Shop</Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to
-                additional content.{" "}
+                A Ecommerce site that one can order an item form and pay really
+                easy this website is very much user friendly with the help of
+                Commerce.js,React.js and stripe.
+              </Card.Text>
+              <Card.Text
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/andrewusoro0/Ecommerce",
+                    "_blank"
+                  )
+                }
+              >
+                Source Code
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
+              <p
+                className="text-muted"
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://ecommerce-free.netlify.app", "_blank")
+                }
+              >
+                View website
+              </p>
             </Card.Footer>
           </Card>
+
           <Card>
             <Card.Img variant="top" src="images/logo12.png" />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>Picture Gallery</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This card has even longer content
-                than the first to show that equal height action.
+                This website is meant to display images of best quality and the
+                photographers name. Bulit with React.js and the help of Unsplash
+                API with the search engine
+              </Card.Text>
+              <Card.Text
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/andrewusoro0/GalleryApp",
+                    "_blank"
+                  )
+                }
+              >
+                Source Code
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Last updated 3 mins ago</small>
+              <p
+                className="text-muted"
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://galleryapp.netlify.app/", "_blank")
+                }
+              >
+                View website
+              </p>
             </Card.Footer>
           </Card>
         </CardDeck>
